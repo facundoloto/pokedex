@@ -1,42 +1,94 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
 body{
-background-color: rgb(247, 4, 45);
-overflow: hidden;
+background-color: rgb(22, 20, 143);
+overflow:hidden;
 }
 @font-face{
 font-family:retro;
 src:url("PressStart2P-Regular.ttf") ;
 }
+.disabled{
+display:none;
+}
+.active{
+display:block;
+}
 .logo{
 display: block;
 margin: auto;
 margin-bottom: 20px;
-width: 250px;
-height: 100px;
+width:400px;
+height:200px;
 }
+.logo img{
+  width:250px;
+  height:250px;
+  }
+  .contenedor{
+ 
+  }
+  .pokemon img{
+  width:200px;
+  height:200px;
+  margin:0 auto;
+  
+  }
+  .ability{
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  color:cornsilk;
+  border-radius:10px;
+  width:200px;
+  height:400px;
+  position: relative;
+  top:-30%;
+  
+  }
+  .input input,button{
+  height:40px;
+  width:80px;
+  margin:0 auto;
+  margin-bottom:15px;
+  }
+  
+  .input label{color:cornsilk;}
+
+span,label{
+  font-size:1em;
+  }
 .contenedor{
 text-align: center;
 margin: 0 auto;
-width:600px;
-height:60vh;
 display: flex;
 justify-content: center;
 align-content: center;
 flex-direction: column;
+width:100vw;
+height:100vh;
 
-}
-
-.card{
-width:400px;
-height:500px;
-margin:0 auto;
-display: inline-block;
 }
 .pokemon{
-width:200px;
-height:180px;
+width:150px;
+height:150px;
 margin:0 auto;
 display:block;
-
+}
+.animate{
+animation-name:heartBeat;
+animation-duration:3s;
+animation-iteration-count: infinite;
+}
+button{
+margin: 0 auto;
+position: relative;
+top:-20%;
 }
 .input {
 text-align: center;
@@ -47,52 +99,77 @@ align-content: center;
 flex-direction: column;
 width:200px;
 height:200px;
-    }
-    .botones{
-    margin-top:50px;
-    }
-.botones button{
-background-color:rgb(94, 221, 111);
-width:35px;
-height:35px;
-}
-span{
-color:rgb(0, 0, 0);
-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-font-size:2em;
-margin-top:1em;
-border-top:1px solid rgb(184, 170, 170);
-}
-@media (min-width:320px)and (max-width:568px){
-
-.contenedor{
-width:100vw;
-height:100vh;
-}
-.pokemon{
-width:180px;
-height:140px;
-}
-.ability{
-margin:0 auto;
-display: flex;
-justify-content: center;
-align-content: center;
-flex-direction: column;
-font-size:8px;
-background-color: rgba(150, 7, 216, 0.575);
-border-radius:10px;
-width:200px;
-position: relative;
-top:-5%
-}
-
-.input {
 position: relative;
 top:-10%;
+font-size:1em;
 }
-.input input{
-height:38px;
-margin-bottom:15px;
+@-webkit-keyframes heartBeat {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    14% {
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+  
+    28% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    42% {
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+  
+    70% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @media (max-width:319px){
+  .input{
+  margin-bottom:100px;
+  }
+  .ability{
+  position:relative;
+  top:40%;
+  }
+  }
+@media (max-width:320px){
+.logo{
+width:130px;
+height:80px;
+}
+button{
+margin-top:25px;
+}
+.input{
+position: fixed;
+top:0;
+}
+}
+@media (min-width:321px)and (max-width:374px){
+
+
+}
+
+
+@media (min-width:375px) and (max-width:647px){
+body{
+font-size:14px;
+}
+.pokemon img{
+width:200px;
+height:200px;
+}
+.logo{
+width:250px;
+height:250px;
+}
+.input{
+
 }
 }

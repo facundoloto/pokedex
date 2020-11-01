@@ -9,19 +9,30 @@
 </head>
 <body>
 <img src="logo2.png" class="logo" alt="">
-<div class="contenedor" id="container">
-<div class="ability">
-<img src="" id="img" class="pokemon">
-<span id="name" class="text-center"></span>
-<span id="id" class="text-center"></span>
-<span id="exp" class="text-center"></span>
-<span id="power" class="text-center"></span>
-<span id="type" class="text-center"></span>
-</div>
+<div class="contenedor " id="container">
 <div class="input">
-<input id="caja" placeholder="Ingrese Un Numero" pattern="[0-9]">
-<button class="text-white btn bg-danger" id="button">Buscar</button>
+<label>enter id o name pokemon</label>
+<input id="caja"  pattern="[0-9]">
+</div> 
+<button type="button" class="btn btn-primary" id="boton" onclick="pokedex()">Buscar</button>
+<div class="loader" id="load"></div>
+<div class="ability">
+<div class="row">
+<div class="col-12"><img src="4xjS.gif" id="img" class="pokemon"></div>
+<div class="col-12"><span id="name" class="text-center"></span></div>
+<div class="col-12"><span id="id" class="text-center"></span></div>
+<div class="col-12"><span id="exp" class="text-center"></span></div>
+<div class="col-12"><span id="power" class="text-center"></span></div>
+<div class="col-12"><span id="type" class="text-center"></span></div>
 </div>
+
+
+
+
+
+
+</div>
+
 
 </div>
 <script src="ajax.js"></script>
