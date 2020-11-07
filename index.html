@@ -2,39 +2,74 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Document</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/bg.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-<img src="logo2.png" class="logo" alt="">
-<div class="contenedor " id="container">
-<div class="input">
-<label>enter id o name pokemon</label>
-<input id="caja"  pattern="[0-9]">
-</div> 
-<button type="button" class="btn btn-primary" id="boton" onclick="pokedex()">Buscar</button>
+<nav class="navbar navbar-expand-lg navbar-light nav-white">
+<a class="navbar-brand" href="#"><img src="/img/pokeapi_256.888baca4.png"></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<input class="nav-link"type="button" id="search" value="buscar">
+</li>
+<li class="nav-item">
+<input class="nav-link"type="button" id="list" value="lista">
+</li>
+</ul>
+</div>
+</nav>
+<div class="logo">
+<img src="img/logo2.png"  alt="">
+</div>
+<div class="container-fluid">
+<div class="intro " id="buscar">
+<label class="">Enter name or id of the pokemon</label>
+<form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+<input class="form-control mr-sm-2" type="search" autocomplete="off" placeholder="Search pokemon" aria-label="Search" id="caja" required>
+<button class="btn btn-outline-success my-2 my-sm-0" type="button"  onclick="pokedex()">Search</button>
+</form>
+</div>
 <div class="loader" id="load"></div>
-<div class="ability">
-<div class="row">
-<div class="col-12"><img src="4xjS.gif" id="img" class="pokemon"></div>
+<div class="contenedor " id="contenedor">
+<div class=""  id="container">
+<div class="row"> 
+<div class="col-12" id="img" class="pokemon"></div>
 <div class="col-12"><span id="name" class="text-center"></span></div>
 <div class="col-12"><span id="id" class="text-center"></span></div>
 <div class="col-12"><span id="exp" class="text-center"></span></div>
 <div class="col-12"><span id="power" class="text-center"></span></div>
 <div class="col-12"><span id="type" class="text-center"></span></div>
 </div>
+</div>
+</div>
+<div class="list" id="poke">
 
-
-
-
-
-
+<template id="template">
+<div class="">
+<img src="..." class="" alt="..." id="imgPoke">
+<span id="namePokemon"></span>
+<span id="idPokemon"></span>
+<span id="typePokemon"></span>
 </div>
 
 
+
+
+</template>
+
 </div>
+</div>
+<script src="list.js"></script>
 <script src="ajax.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
