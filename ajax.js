@@ -1,4 +1,3 @@
-
 let load=document.getElementById('load')
 let caja=document.getElementById('caja')
 let name=document.getElementById('name')

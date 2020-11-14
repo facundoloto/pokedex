@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/bg.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light nav-white">
+<a class="navbar-brand" href="#"><img src="/img/pokeapi_256.888baca4.png"></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">home</a>
+          </li>
+    </li>
+    <li class="nav-item ">
+        <li class="nav-item">
+            <a class="nav-link" href="#">search</a>
+          </li>
+    </li>
+    <li class="nav-item">
+        <li class="nav-item">
+            <a class="nav-link" href="listar.html">list</a>
+          </li>
+    </li>
+    
+</ul>
+</div>
+</nav>
+<div class="home">
+    <img src="/img/logo2.png">
+    <p class="text-center">
+     ¡Busca tu pokemon favorito en este lugar!
+    </p>
+    </div>
+<div class="container-fluid">
+<div class="intro " id="buscar">
+<label class="">Enter name or id of the pokemon</label>
+<form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+<input class="form-control mr-sm-2" type="search" autocomplete="off" placeholder="Search pokemon" aria-label="Search" id="caja" required>
+<button class="btn btn-outline-success my-2 my-sm-0" type="button"  onclick="pokedex()">Search</button>
+</form>
+</div>
+<div class="loader" id="load"></div>
+<div class="contenedor " id="contenedor">
+<div class=""  id="container">
+<div class="row"> 
+<div class="col-12" id="img" class="pokemon"></div>
+<div class="col-12"><span id="name" class="text-center"></span></div>
+<div class="col-12"><span id="id" class="text-center"></span></div>
+<div class="col-12"><span id="exp" class="text-center"></span></div>
+<div class="col-12"><span id="power" class="text-center"></span></div>
+<div class="col-12"><span id="type" class="text-center"></span></div>
+</div>
+</div>
+</div>
+<div class="list" id="listPokemon">
+
+<template id="template">
+<div class="">
+<img src="..." class="" alt="..." id="imgPoke">
+<span id="namePokemon"></span>
+<span id="idPokemon"></span>
+<span id="typePokemon"></span>
+</div>
+
+
+
+
+</template>
+
+</div>
+</div>
+<script src="/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="ajax.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

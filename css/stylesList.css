@@ -1,0 +1,72 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body { 
+font-family:Lato,sans-serif;
+background: #dbe2ef;
+
+}
+.home{
+min-width:100vh;
+color: #fff;
+display: flex;
+text-align: center;
+justify-content:center;
+align-content: center;
+flex-direction: column;
+background-color: #263238;
+}
+.home img{
+margin:0 auto;
+width:250px;
+height:150px;
+}
+.home p{
+
+}
+.filtros{
+margin-top:50px;
+max-width:15%;
+max-height:100%;
+}
+nav{
+background-color:#f74b4b;
+
+}
+nav img{
+width:120px;
+height:50px;
+}
+.navbar-nav{
+float:left !important;
+}
+nav ul li a{
+color:whitesmoke !important;
+}
+nav ul li:hover{
+background-color:#f72626;
+}
+.list{
+    width:70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.template{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position:relative;
+    top:5%;
+    margin:0 auto;
+    font-size:1em;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    border-radius:20px;
+    width:200px;
+    height:300px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+ 
