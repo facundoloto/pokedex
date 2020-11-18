@@ -61,20 +61,21 @@
 </div>
 </div>
 
-
-<div class="loader" id="load"></div>
+<template id="template">
+  <div class="template">
+  <img src="" class="" alt="..." id="imgPoke">
+  <span id="namePokemon"></span>
+  <span id="idPokemon"></span>
+  <span id="typePokemon"></span>
+  </div>
+  </template> <!--muy importante declarar el template por fuera del div list por que se borrara todos los nodos para poder llenarlos luego-->
+<div class="loader" id="load">
+<img src="img/loader.gif">
+</div>
 
 <div class="list" id="listPokemon">
 
-<template id="template">
-<div class="template">
-<img src="" class="" alt="..." id="imgPoke">
-<span id="namePokemon"></span>
-<span id="idPokemon"></span>
-<span id="typePokemon"></span>
-</div>
 
-</template>
 
 </div>
 <script src="jquery-3.5.1.js"></script>
