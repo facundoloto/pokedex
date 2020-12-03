@@ -110,8 +110,9 @@ obj.url=String(`${result_pokemon.sprites.front_default}`) //al ser prototipado t
 const template=document.getElementById("template") //guardamos el temaplate en una variable
 const newTemplate=template.content.cloneNode(true) //clonamos el template
 newTemplate.getElementById('namePokemon').textContent=`${result_pokemon.name}` //le agreamos los elementos que tiene el template
-newTemplate.getElementById('idPokemon').textContent=`${result_pokemon.id}`
-newTemplate.getElementById('typePokemon').textContent=`${result_pokemon.types[0].type.name}`
+newTemplate.getElementById('idPokemon').textContent=`#${result_pokemon.id}`
+newTemplate.getElementById('typePokemon').textContent=`type: ${result_pokemon.types[0].type.name}`
+newTemplate.getElementById('abilityPokemon').textContent=`ability:${result_pokemon.abilities[0].ability.name}`
 newTemplate.getElementById('imgPoke').src=`${obj.url}`
 fragment.appendChild(newTemplate) //fragment guarda todos los elementos para cuando queramos usarlos lo podamos mostrar en el dom cuando queramos
 response.push(obj) //guarda objeto en array

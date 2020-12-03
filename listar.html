@@ -9,73 +9,88 @@
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stylesList.css">
+<link rel="stylesheet" href="css/stylesHome.css">
 <link rel="stylesheet" href="css/bg.css">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light nav-white">
-<a class="navbar-brand" href="#"><img src="/img/pokeapi_256.888baca4.png"></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-<ul class="navbar-nav mr-auto">
-
-<li class="nav-item">
-<a class="nav-link" href="index.html">home</a>
-</li>
-
-
-<li class="nav-item">
-<a class="nav-link" href="search.html">search</a>
-</li>
-
-</ul>
-</div>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar-light nav-white">
+    <a class="navbar-brand" href="#"><img src="/img/pokeapi_256.888baca4.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item">
+    <li class="nav-item">
+    <a class="nav-link" href="index.html">home</a>
+    </li>
+    </li>
+    <li class="nav-item ">
+    <li class="nav-item">
+    <a class="nav-link" href="search.html">search</a>
+    </li>
+    </li>
+    <li class="nav-item">
+    <li class="nav-item">
+    <a class="nav-link" href="listar.html">list</a>
+    </li>
+    </li>
+    
+    </ul>
+    </div>
+    </nav>
 <div class="home">
 <img src="/img/logo2.png">
 <p class="text-center">
 ¡En este lugar estan todos los pokemon de cada generacion,encuentra tus favoritos!
 </p>
 </div>
-<div class="filtros">
-<div class="btn-group">
-    <div class="btn-group">
-        <button type="button" class="btn btn-secondary dropdown-toggle bg-danger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Generacion
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <button class="dropdown-item bg-danger" type="button" id="firts">Primera</button>
-          <button class="dropdown-item bg-success" type="button" id="seconds">Segunda</button>
-          <button class="dropdown-item bg-primary" type="button" id="third">Tercera</button>
-          <button class="dropdown-item bg-warning" type="button" id="quarter">Cuarta</button>
-          <button class="dropdown-item bg-info " type="button" id="fifth">Quinta</button>
-          <button class="dropdown-item bg-success" type="button" id="sixth">Sexta</button>
-          <button class="dropdown-item bg-danger" type="button" id="seventh">Septima</button>
-          <button class="dropdown-item bg-info" type="button" id="eighth">Octava</button>
-        </div>
-      </div>
-
-</div>
-</div>
-
-<template id="template">
-  <div class="template">
-  <img src="" class="" alt="..." id="imgPoke">
-  <span id="namePokemon"></span>
-  <span id="idPokemon"></span>
-  <span id="typePokemon"></span>
+<!--<div class="filtros">
+  <div class="btn-group-vertical text-light bg-danger">
+    <button class="dropdown-item bg-danger" type="button" id="firts">Primera</button>
+    <button class="dropdown-item " type="button" id="seconds">Segunda</button>
+    <button class="dropdown-item " type="button" id="third">Tercera</button>
+    <button class="dropdown-item " type="button" id="quarter">Cuarta</button>
+    <button class="dropdown-item  " type="button" id="fifth">Quinta</button>
+    <button class="dropdown-item " type="button" id="sixth">Sexta</button>
+    <button class="dropdown-item " type="button" id="seventh">Septima</button>
+    <button class="dropdown-item " type="button" id="eighth">Octava</button>
   </div>
-  </template> <!--muy importante declarar el template por fuera del div list por que se borrara todos los nodos para poder llenarlos luego-->
-<div class="loader" id="load">
-<img src="img/loader.gif">
-</div>
+-->
 
+<template id="template" >
+
+<div class="card" style="width:15em;">
+<img class="card-img-top bg-dark" src="..." alt="Card image cap" id="imgPoke">
+<div class="card-body">
+<h5 class="card-title" id="namePokemon"></h5>
+</div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item" id="idPokemon"></li>
+<li class="list-group-item" id="typePokemon"></li>
+<li class="list-group-item" id="abilityPokemon"></li>
+</ul>
+</div>
+</template>
+
+<!--
+<template id="template">
+<div class="template">
+<img src="" class="" alt="..." id="imgPoke">
+<span id="namePokemon"></span>
+<span id="idPokemon"></span>
+<span id="typePokemon"></span>
+</div>
+</template> --muy importante declarar el template por fuera del div list por que se borrara todos los nodos para poder llenarlos luego-->
+
+<div class="loader" id="load">
+  <img src="img/loader.gif">
+  </div>
 <div class="list" id="listPokemon">
 
-
+ 
 
 </div>
 <script src="jquery-3.5.1.js"></script>
