@@ -17,6 +17,7 @@ let six=document.getElementById('sixth')
 let seven=document.getElementById('seventh')
 let eight=document.getElementById('eighth')
 
+let title=document.getElementById('title')
 function remove(){
 
 while (poke.firstChild) { //si hay un hijo pasa al ciclo y elimana a todos hasta que el primero hijo de falso(ya no tenga ningun nodo hijo)
@@ -27,6 +28,8 @@ poke.removeChild(poke.firstChild);
 //por cada generacion una funcion que envia por parametro desde donde buscar en la api hasta donde tiene que terminar de buscar
 one.addEventListener("click",function g1(){
 remove()
+title.textContent="Kanto"
+
 loader.style.display="block";
 const min=0
 const max=151
@@ -36,19 +39,25 @@ listar(min,max)
 
 two.addEventListener("click",function g2(){
 remove()
+
+title.textContent="Johto"
 loader.style.display="block";
 const min=151
 const max=251
 listar(min,max)
 })
 trhee.addEventListener("click",function g3(){
+ 
 remove()
+title.textContent="Hoenn"
 loader.style.display="block";
 const min=251
 const max=386
 listar(min,max)
 })
 four.addEventListener("click",function g4(){
+
+  title.textContent="Sinnoh"
   loader.style.display="block";
 remove()
 const min=386
@@ -56,6 +65,8 @@ const max=493
 listar(min,max)
 })
 five.addEventListener("click",function g5(){
+ 
+  title.textContent="Teselia"
   loader.style.display="block";
 remove()
 const min=493
@@ -64,6 +75,8 @@ listar(min,max)
 })
 
 six.addEventListener("click",function g6(){
+
+  title.textContent="Kalos"
   loader.style.display="block";
 remove()
 const min=649
@@ -72,6 +85,8 @@ listar(min,max)
 })
 
 seven.addEventListener("click",function g7(){
+ 
+  title.textContent="Alola"
   loader.style.display="block";
 remove()
 const min=721
@@ -80,6 +95,8 @@ listar(min,max)
 })
 
 eight.addEventListener("click",function g8(){
+  
+  title.textContent="Galar"
   loader.style.display="block";
 remove()
 const min=809
@@ -113,15 +130,21 @@ newTemplate.getElementById('namePokemon').textContent=`${result_pokemon.name}` /
 newTemplate.getElementById('idPokemon').textContent=`#${result_pokemon.id}`
 newTemplate.getElementById('typePokemon').textContent=`type: ${result_pokemon.types[0].type.name}`
 newTemplate.getElementById('abilityPokemon').textContent=`ability:${result_pokemon.abilities[0].ability.name}`
-newTemplate.getElementById('imgPoke').src=`${obj.url}`
+const img=newTemplate.getElementById('imgPoke')
+let bgPoke=result_pokemon.types[0].type.name
+const card=newTemplate.getElementById('card')
+img.src=`${obj.url}`
+colorCard(card,bgPoke)
 fragment.appendChild(newTemplate) //fragment guarda todos los elementos para cuando queramos usarlos lo podamos mostrar en el dom cuando queramos
 response.push(obj) //guarda objeto en array
 
 }
-poke.appendChild(fragment) //usamos fragment
+loader.style.display="none";
+poke.appendChild(fragment)
+ //usamos fragment
 arr= await Promise.all(response)//ejecuta la promesa response haciendo que los datos se carguen mas rapido hasta que esto no se cargue el codigo que sigue no se ejecutara
 //localStorage.setItem('myArray', JSON.stringify(arr));
-loader.style.display="none"; //cuando termine de carga la promesa seteo display none el div de esta el gif carga
+ //cuando termine de carga la promesa seteo display none el div de esta el gif carga
 
 }
 catch(Error){
@@ -135,4 +158,61 @@ const filter = arr.filter(el => el.type=="normal");
 for(let i=0;i<filter.length;i++){
 console.log("pokemon de hierba: "+filter[i].name+" "+filter[i].type)
 }
+}
+
+function colorCard(id,bg){
+ 
+  switch (bg) {
+  case "normal":
+  id.className="card-img-top  normal"
+  break;
+  case "water":
+  id.className=" card-img-top  water"
+  break;  
+  case "electric":
+  id.className="card-img-top electric"
+  break;
+  case "fighting":
+  id.className="card-img-top  fighting"
+  break;
+  case "ground":
+  id.className=" card-img-top  ground"
+  break;
+  case "psychic":
+  id.className=" card-img-top psychic"
+  break;
+  case "rock":
+  id.className=" card-img-top rock"
+  break;
+  case "dark":
+  id.className=" card-img-top dark"
+  break;
+  case "steel":
+  id.className=" card-img-top steel"
+  break;
+  case "grass":
+  id.className=" card-img-top grass"
+  break;
+  case "ice":
+  id.className=" card-img-top ice"
+  break;
+  case "poison":
+  id.className=" card-img-top poison"
+  break;
+  case "bug":
+  id.className=" card-img-top bug"
+  break;
+  case "ghost":
+  id.className=" card-img-top ghost"
+  break;
+  case "dragon":
+  id.className=" card-img-top dragon"
+  break;
+  case "fairy":
+  id.className=" card-img-top fairy"
+  break;
+  case "fire":
+  id.className=" card-img-top fire"
+  break;
+  }
 }

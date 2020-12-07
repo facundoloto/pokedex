@@ -1,69 +1,73 @@
 .normal{
 background-color: lightgray;
 }
-.water{
-background-color:#DEF3FD;
+.water,.ice{
+    background-image:url("/img/sobble\ \(online-video-cutter.com\).gif");
+    background-size: cover;
 
 }
 .fire{
-background-color: #FDDFDF;
+    background-image:url("/img/scorbunny\ \(online-video-cutter.com\).gif");
+    background-size: cover;
 
 }
 .electric{
-background-color:#FCF7DE;
-color:black; 
-}
+    background-image:url("/img/electric.jpg");
+    background-size: cover;
 
-.flying{
-background-color:#F5F5F5;
+}
+.dragon{
+    background-color:#fd9090;
+    
+    }
+.fighting{
+background-color:#beb6b6;
 
 }
 .ground{
-background-color:#f4e7da;
+background-color:#e7f4da;
 
 }
 .psychic{
-background-color: #eaeda1;
+background-image:url("/img/psychic-type_hLtSSbxj_sJU2.gif");
+background-size: cover;
 }
 .rock{
 background-color:#d5d5d4;
 
 }
 .dark{
-background-color:	rgb(105,105,105);
- 
+background-color:	rgb(145, 145, 145);
+
 }
 .steel{
 background-color:rgb(169,169,169);
 
 }
-.grass{
-background-color:#c8ffcc;
+.grass,.bug{
+    background-image:url("/img/grookey\ \(online-video-cutter.com\).gif");
+    background-size: cover;
 
 }
-.ice{
-background-color:rgb(175,238,238);
 
-}
 .poison{
-background-color:#d8b5fc;
- 
+
+    background-image:url("/img/poison.jpg");
+    background-size: cover;
 }
 .ghost{
 background-color:rgb(112,128,144);
 
 }
-.dragon{ 
-background-color:rgb#97b3e6;
 
-}
 .fairy{
-background-color:#fceaff;
+    background-image:url("/img/feary.jpg");
+    background-size: cover;
 
 }
-.bug{
-    background-color:#f8d5a3;
-   
-    }
-    
 
+    
+    .flying{
+        background-color:#c79494;
+        
+        }

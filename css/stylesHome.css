@@ -60,7 +60,7 @@ max-width:150px;
 position: absolute; /*posiciona el footer al pie de la pagina*/
 bottom: 0;
 width:100vw;
-
+margin-bottom:.5em;
 }
 .footer p{
 font-family: Lato,sans-serif;
@@ -119,4 +119,7 @@ margin-left:-0;
 margin: 0 auto;
 margin-left:15px;
 }
+.footer{
+    display:none;
+    }
 }
