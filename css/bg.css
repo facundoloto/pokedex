@@ -12,8 +12,7 @@ background-color: lightgray;
 
 }
 .electric{
-    background-image:url("/img/electric.jpg");
-    background-size: cover;
+ background-color: rgb(247, 247, 137);
 
 }
 .dragon{
@@ -52,8 +51,7 @@ background-color:rgb(169,169,169);
 
 .poison{
 
-    background-image:url("/img/poison.jpg");
-    background-size: cover;
+background-color: rgb(70, 4, 70);
 }
 .ghost{
 background-color:rgb(112,128,144);
@@ -61,8 +59,7 @@ background-color:rgb(112,128,144);
 }
 
 .fairy{
-    background-image:url("/img/feary.jpg");
-    background-size: cover;
+    background-color:#ff9e9e;
 
 }
 

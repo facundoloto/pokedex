@@ -112,13 +112,12 @@ display:flex;
 text-align: center;
 justify-content:center;
 align-content: center;
-
+margin:0 auto
 }
 .btn-grupos button{
-margin-left:-0;
+
 margin: 0 auto;
-margin-left:15px;
-}
+
 .footer{
     display:none;
     }
