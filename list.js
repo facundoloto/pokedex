@@ -35,12 +35,12 @@ window.scrollTo(0, 0)
 
 //por cada generacion una funcion que envia por parametro desde donde buscar en la api hasta donde tiene que terminar de buscar
 one.addEventListener("click",function g1(){
-  
-  remove()
-  title.textContent="Kanto"
-  loader.style.display="block";
 
-  listar(0,151)
+remove()
+title.textContent="Kanto"
+loader.style.display="block";
+
+listar(0,151)
 })
 
 
@@ -61,10 +61,10 @@ listar(251,386)
 
 })
 
-  
-  
+
+
 four.addEventListener("click",()=>{
- 
+
 remove()
 title.textContent="Sinnoh"
 loader.style.display="block";
@@ -117,83 +117,83 @@ listar(809,893)
 function colorCard(id,bg,type){
 
 
-  switch (bg) {
-  case "normal":
- 
-  id.className="card-img-top  normal"
-  type.src="./img/normal.png" //en base al tipo se le da un fondo y un sello en type del template
-  break;
-  case "water":
-    
-  id.className=" card-img-top  water"
+switch (bg) {
+case "normal":
 
-  type.src="./img/water.png"
-  break;  
-  case "electric":
-  id.className="card-img-top electric"
-  type.src="./img/electric.png"
-  break;
-  case "fighting":
-  id.className="card-img-top  fighting"
-  type.src="./img/fighting.png"
-  break;
-  case "ground":
-  id.className=" card-img-top  ground"
-  type.src="./img/ground.png"
-  break;
-  case "psychic":
-  id.className=" card-img-top psychic"
-  type.src="./img/psychic.png"
-  break;
-  case "rock":
-  id.className=" card-img-top rock"
-  type.src="./img/rock.png"
-  break;
-  case "dark":
-  id.className=" card-img-top dark"
-  type.src="./img/dark.png"
-  break;
-  case "steel":
-  id.className=" card-img-top steel"
-  type.src="./img/steel.png"
-  break;
-  case "grass":
-  id.className=" card-img-top grass"
-  type.src="./img/grass.png"
-  break;
-  case "ice":
-  id.className=" card-img-top ice"
-  type.src="./img/ice.png"
-  break;
-  case "poison":
-  id.className=" card-img-top poison"
-  type.src="./img/poison.png"
-  break;
-  case "bug":
-  id.className=" card-img-top bug"
-  type.src="./img/bug.png"
-  break;
-  case "ghost":
-  id.className=" card-img-top ghost"
-  type.src="./img/ghost.png"
-  break;
-  case "dragon":
-  id.className=" card-img-top dragon"
-  type.src="./img/dragon.png"
-  break;
-  case "fairy":
-  id.className=" card-img-top fairy"
-  type.src="./img/fairy.png"
-  break;
-  case "fire":
-  id.className=" card-img-top  fire"
-  type.src="./img/fire.png"
-  break;
-  case "flying":
-  id.className=" card-img-top flying"
-  type.src="./img/flying.png"
-  break;
-  }
+id.className="card-img-top  normal"
+type.src="img/normal.png" //en base al tipo se le da un fondo y un sello en type del template
+break;
+case "water":
+
+id.className=" card-img-top  water"
+
+type.src="img/water.png"
+break;  
+case "electric":
+id.className="card-img-top electric"
+type.src="img/electric.png"
+break;
+case "fighting":
+id.className="card-img-top  fighting"
+type.src="img/fighting.png"
+break;
+case "ground":
+id.className=" card-img-top  ground"
+type.src="img/ground.png"
+break;
+case "psychic":
+id.className=" card-img-top psychic"
+type.src="img/psychic.png"
+break;
+case "rock":
+id.className=" card-img-top rock"
+type.src="img/rock.png"
+break;
+case "dark":
+id.className=" card-img-top dark"
+type.src="img/dark.png"
+break;
+case "steel":
+id.className=" card-img-top steel"
+type.src="img/steel.png"
+break;
+case "grass":
+id.className=" card-img-top grass"
+type.src="img/grass.png"
+break;
+case "ice":
+id.className=" card-img-top ice"
+type.src="img/ice.png"
+break;
+case "poison":
+id.className=" card-img-top poison"
+type.src="img/poison.png"
+break;
+case "bug":
+id.className=" card-img-top bug"
+type.src="img/bug.png"
+break;
+case "ghost":
+id.className=" card-img-top ghost"
+type.src="img/ghost.png"
+break;
+case "dragon":
+id.className=" card-img-top dragon"
+type.src="img/dragon.png"
+break;
+case "fairy":
+id.className=" card-img-top fairy"
+type.src="img/fairy.png"
+break;
+case "fire":
+id.className=" card-img-top  fire"
+type.src="img/fire.png"
+break;
+case "flying":
+id.className=" card-img-top flying"
+type.src="img/flying.png"
+break;
+}
 }
 
 
@@ -209,45 +209,45 @@ let min_poke=parseInt(min)
 let fragment = document.createDocumentFragment();
 menu.disabled=true;
 for(let i=min_poke;i<max_poke;i++){
-  
- 
-  let  total=await fetch(`https://pokeapi.co/api/v2/pokemon/${i+1}`) //los await sirve para que se vuelva sincrono,osea que lo que sigue despuesde await espere hasta que termine de ejecutarse
-  
-  let result_pokemon=await total.json() //el await este hace que se ejecute la funcion fetch await que guarda la paromesa que esta en la variable totalPromise
-  
-  let url=String(`${result_pokemon.sprites.front_default}`) //al ser prototipado tenemos que poner la propiedad url y no el metodo set urlPoke
-  
-  const template=document.getElementById("template") //guardamos el temaplate en una variable
-  
-  const newTemplate=template.content.cloneNode(true) //clonamos el template
-  
-  newTemplate.getElementById('namePokemon').textContent=`${result_pokemon.name}` //le agreamos los elementos que tiene el template
-  
-  newTemplate.getElementById('idPokemon').textContent=`N°${result_pokemon.id}`
-  
-  let type=newTemplate.getElementById('typePokemon')
-  
-  newTemplate.getElementById('abilityPokemon').textContent=`${result_pokemon.abilities[0].ability.name}`
-  
-  const img=newTemplate.getElementById('imgPoke')
- 
-  let bgPoke=result_pokemon.types[0].type.name
-  
-  const card=newTemplate.getElementById('card')
-  
-  img.src=`${url}`
-  
-  colorCard(card,bgPoke,type)
-  
-  fragment.appendChild(newTemplate) //fragment guarda todos los elementos para cuando queramos usarlos lo podamos mostrar en el dom cuando queramos
-  
-  
 
 
-  }
-  loader.style.display="none";
+let  total=await fetch(`https://pokeapi.co/api/v2/pokemon/${i+1}`) //los await sirve para que se vuelva sincrono,osea que lo que sigue despuesde await espere hasta que termine de ejecutarse
 
-  poke.appendChild(fragment)
+let result_pokemon=await total.json() //el await este hace que se ejecute la funcion fetch await que guarda la paromesa que esta en la variable totalPromise
+
+let url=String(`${result_pokemon.sprites.front_default}`) //al ser prototipado tenemos que poner la propiedad url y no el metodo set urlPoke
+
+const template=document.getElementById("template") //guardamos el temaplate en una variable
+
+const newTemplate=template.content.cloneNode(true) //clonamos el template
+
+newTemplate.getElementById('namePokemon').textContent=`${result_pokemon.name}` //le agreamos los elementos que tiene el template
+
+newTemplate.getElementById('idPokemon').textContent=`N°${result_pokemon.id}`
+
+let type=newTemplate.getElementById('typePokemon')
+
+newTemplate.getElementById('abilityPokemon').textContent=`${result_pokemon.abilities[0].ability.name}`
+
+const img=newTemplate.getElementById('imgPoke')
+
+let bgPoke=result_pokemon.types[0].type.name
+
+const card=newTemplate.getElementById('card')
+
+img.src=`${url}`
+
+colorCard(card,bgPoke,type)
+
+fragment.appendChild(newTemplate) //fragment guarda todos los elementos para cuando queramos usarlos lo podamos mostrar en el dom cuando queramos
+
+
+
+
+}
+loader.style.display="none";
+
+poke.appendChild(fragment)
 menu.disabled=false
 }
 
