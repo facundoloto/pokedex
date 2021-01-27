@@ -1,6 +1,6 @@
 #firts::after{
 content: "";
-background: url("/img/charmander.png");
+background: url("./img/charmander.png");
 background-size:cover;
 display:inline-block;
 width:22px;
@@ -10,7 +10,7 @@ top:3px;
 left:10px;}
 #seconds::after{
 content: "";
-background: url("/img/squirtle.png");
+background: url("./img/squirtle.png");
 background-size:cover;
 display:inline-block;
 width:22px;
@@ -21,7 +21,7 @@ left:10px;}
 
 #third::after{
 content: "";
-background: url("/img/bullbasaur.png");
+background: url("./img/bullbasaur.png");
 background-size:cover;
 display:inline-block;
 width:22px;
@@ -32,7 +32,7 @@ left:10px;}
 
 #quarter::after{
 content: "";
-background: url("/img/snorlax\ \(1\).png");
+background: url("./img/snorlax\ \(1\).png");
 background-size:cover;
 display:inline-block;
 width:22px;
@@ -43,7 +43,7 @@ left:10px;}
 
 #fifth::after{
 content: "";
-background: url("/img/jigglypuff.png");
+background: url("./img/jigglypuff.png");
 background-size:cover;
 display:inline-block;
 width:22px;
@@ -53,7 +53,7 @@ top:3px;
 left:10px;}
 #sixth::after{
 content: "";
-background: url("/img/eevee.png");
+background: url("./img/eevee.png");
 background-size:cover;
 display:inline-block;
 width:22px;
@@ -63,7 +63,7 @@ top:3px;
 left:10px;}
 #seventh::after{
 content: "";
-background: url("/img/pikachu.png");
+background: url("./img/pikachu.png");
 background-size:cover;
 display:inline-block;
 width:22px;
@@ -73,7 +73,7 @@ top:3px;
 left:10px;}
 #eighth::after{
 content: "";
-background: url("/img/psyduck.png");
+background: url("./img/psyduck.png");
 background-size:cover;
 display:inline-block;
 width:22px;
@@ -83,7 +83,7 @@ top:3px;
 left:10px;}
 .card h4::before{
 content: "";
-background: url("/img/pokebola.png");
+background: url("./img/pokebola.png");
 background-size:cover;
 display:inline-block;
 width:15px;
