@@ -34,6 +34,4 @@ class pokemonObj{
      this.urlPoke=url
     }
 
-
-
 }

@@ -15,7 +15,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light nav-white">
-<a class="navbar-brand" href="#"><img src="/img/pokeapi_256.888baca4.png"></a>
+<a class="navbar-brand" href="#"><img src="./img/pokeapi_256.888baca4.png"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
@@ -23,26 +23,13 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="nav navbar-nav ml-auto">
 <li class="nav-item">
-<li class="nav-item">
 <a class="nav-link" href="index.html">home</a>
 </li>
-</li>
-<li class="nav-item ">
-<li class="nav-item">
-<a class="nav-link" href="search.html">search</a>
-</li>
-</li>
-<li class="nav-item">
-<li class="nav-item">
-<a class="nav-link" href="listar.html">list</a>
-</li>
-</li>
-
 </ul>
 </div>
 </nav>
 <div class="home">
-<img src="/img/logo2.png">
+<img src="./img/logo2.png" >
 <p class="text-center ">
 ¡En este lugar estan todos los pokemon de cada region,encuentra tus favoritos!
 </p>
@@ -51,62 +38,61 @@
 <div class="push bg-primary"data-pushbar-id="mypushbar1" data-pushbar-direction="left">
  
     <!-- Example single danger button -->
-    <ul class="">
+    <ul class="" id="menu">
         <li> <h4 class="text-light text-left">Region</h4></li> <!--ver push.js y modificar diseño de card-->
         <li class="">
-        <button  type="button" data-pushbar-close class="btn btn-primary" id="firts">Kanto</button>
+        <button  type="button" data-pushbar-close class="btn btn-primary" id="firts">Kanto(1-151)</button>
         </li>
         <li class="">
-        <button type="button" data-pushbar-close class="btn btn-primary" id="seconds">Johto</button>
+            <button type="button" data-pushbar-close class="btn btn-primary" id="seconds">Johto(152-251)</button>
         </li>
         <li class="">
-        <button type="button"  data-pushbar-close class="btn btn-primary"id="third">Hoenn</button>
+        <button type="button"  data-pushbar-close class="btn btn-primary"id="third">Hoenn(252-386)</button>
         </li>
         <li class="">
-        <button type="button" data-pushbar-close class="btn btn-primary"id="quarter">Sinnoh</button>
+        <button type="button" data-pushbar-close class="btn btn-primary"id="quarter">Sinnoh(387-493)</button>
         </li>
         <li class="">
-        <button type="button"  data-pushbar-close class="btn btn-primary"id="fifth">Teselia</button>
+        <button type="button"  data-pushbar-close class="btn btn-primary"id="fifth">Teselia(494-649)</button>
         </li>
         <li class="">
-        <button type="button"  data-pushbar-close class="btn btn-primary"id="sixth">Kalos</button>
+        <button type="button"  data-pushbar-close class="btn btn-primary"id="sixth">Kalos(650-721)</button>
         </li>
         <li class="">
-        <button type="button" data-pushbar-close class="btn btn-primary"id="seventh">Alola</button>
+        <button type="button" data-pushbar-close class="btn btn-primary"id="seventh">Alola(722-809)</button>
         </li>
-        <li class=""">
+        <li class="">
         
-        <button type="button"  data-pushbar-close class="btn btn-primary"id="eighth">Galar</button>
+        <button type="button"  data-pushbar-close class="btn btn-primary"id="eighth">Galar(810-893)</button>
         </li>
+     
         </ul>
 
 
 
 <button class="close text-light"  data-pushbar-close>x</button>
 </div>
-<div class="filter bg-dark"><button class="btn"data-pushbar-target="mypushbar1" >
-<img src="img/menu (1).png" width="30px" height="30px">
+<div class="filter bg-dark">
+  
+    <button class="btn btn-dark" data-pushbar-target="mypushbar1" >
+     <img src="./img/menu3.png">
     </button></div>
     
-<div class="title">
-    <h1 class="text-center text-light " id="title">Pokedex</h1>
-    </div>
-    <div class="loader">
-        <img src="img/loader.gif" id="load">
-        </div>
+
+ 
 
 
 
 <template id="template" >
-<div class="card " >
+<div class="card "  >
 <div class="card-img-top" id="card">
 <img class="" src="..." alt="Card image cap" id="imgPoke">
 </div>
-<div class="card-body">
+<div class="card-body" >
 <h4 class="card-title text-center text-card" id="namePokemon"></h4>
-<p class="card-text text-center text-card" id="idPokemon"></p>
-<p class="card-text text-center text-card" id="typePokemon"></p>
-<p class="card-text text-center text-card" id="abilityPokemon"></p>
+<p class="card-text text-center text-card " id="idPokemon"></p>
+<img src=""  id="typePokemon">
+<p class="card-text text-center text-card " id="abilityPokemon"></p>
 </div>
 
 
@@ -124,12 +110,19 @@
 
 
 <div class="container">
+    <div class="title" >
+       <h1 class="text-center text-light " id="title" ></h1>
+        </div>
+        <div class="loader">
+            <img src="./img/loader.gif" id="load">
+            </div>
 <div class="list" id="listPokemon">
   
 
 
 
 </div>
+
 </div>
 
 
@@ -142,7 +135,7 @@
 <script src="pokemonObj.js"></script>
 <script src="list.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></script>
-<script type="text/javascript">
+<script type="text/javascript"> //dirve para el menu
     const pushbar = new Pushbar({
           blur:true,
           overlay:true,
