@@ -4,59 +4,59 @@ background-size: cover;
 
 }
 .water,.ice{
-    background-image:url("/img/water.gif");
+    background-image:url("./img/water.gif");
     background-size: cover;
     
 }
 .fire{
-    background-image:url("/img/fire.gif");
+    background-image:url("img/fire.gif");
     background-size: cover;
    
 }
 .electric{
-background-image: url('/img/bg-electric.png');
+background-image: url('img/bg-electric.png');
 background-size: cover;
 
 }
 .dragon,.flying{
-background-image: url('/img/bg-flying.jpg');
+background-image: url('img/bg-flying.jpg');
 background-size: cover;
     
     }
 
 .ground,.rock,.fighting{
-background-image: url('/img/bg-ground.jpg');
+background-image: url('img/bg-ground.jpg');
 background-size: cover;
 
 }
 .psychic{
-background-image:url("/img/psychic-type_hLtSSbxj_sJU2.gif");
+background-image:url("img/psychic-type_hLtSSbxj_sJU2.gif");
 background-size: cover;
 
 }
 
 .dark,.ghost{
-background-image: url('/img/bg-dark.jpg');
+background-image: url('img/bg-dark.jpg');
 background-size: cover;
 
 }
 
 .grass,.bug{
-    background-image:url("/img/grass.gif");
+    background-image:url("img/grass.gif");
     background-size: cover;
    
 }
 
 .poison{
 
-    background-image: url('/img/bg-poison.jpg');
+    background-image: url('img/bg-poison.jpg');
     background-size: cover;
 
 }
 
 
 .fairy{
-    background-image: url('/img/bg-fairy.jpg');
+    background-image: url('img/bg-fairy.jpg');
     background-size: cover;
 
 }
