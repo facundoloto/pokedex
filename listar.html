@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>list</title>
+<link rel="shortcut icon" href="img/icons8-superball-48.png" />
+<title>lista</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/animate.css">
@@ -15,7 +15,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light nav-white">
-<a class="navbar-brand" href="#"><img src="./img/pokeapi_256.888baca4.png"></a>
+<a class="navbar-brand" href="#"><img src="./img/pokeapi_256.888baca4.png" id="img"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
@@ -32,7 +32,10 @@
 <img src="./img/logo2.png" >
 <p class="text-center ">
 ¡En este lugar estan todos los pokemon de cada region,encuentra tus favoritos!
+<br>
+(Ya que los datos son consumidos en servicio externo,puede tardar algunas veces las llegada de los pokemon,desde ya disculpas.)
 </p>
+
 </div>
 
 <div class="push bg-primary"data-pushbar-id="mypushbar1" data-pushbar-direction="left">
@@ -111,7 +114,7 @@
 
 <div class="container">
     <div class="title" >
-       <h1 class="text-center text-light " id="title" ></h1>
+       <h1 class="text-center text-light " id="title" >Pokedex</h1>
         </div>
         <div class="loader">
             <img src="./img/loader.gif" id="load">
@@ -134,8 +137,9 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="pokemonObj.js"></script>
 <script src="list.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></script>
-<script type="text/javascript"> //dirve para el menu
+
+<script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></script> <!--libreria menu lateral-->
+<script type="text/javascript"> //sirve para el menu
     const pushbar = new Pushbar({
           blur:true,
           overlay:true,

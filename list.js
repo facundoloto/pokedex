@@ -16,7 +16,7 @@ let five=document.getElementById('fifth')
 let six=document.getElementById('sixth')
 let seven=document.getElementById('seventh')
 let eight=document.getElementById('eighth')
-let menu=document.getElementById("menu").parentNode
+
 
 
 let title=document.getElementById('title')
@@ -26,7 +26,7 @@ function remove(){
 
 while (poke.firstChild) { //si hay un hijo pasa al ciclo y elimana a todos hasta que el primero hijo de falso(ya no tenga ningun nodo hijo)
 poke.removeChild(poke.firstChild); 
-window.scrollTo(0, 0)
+window.scrollTo(0, 0)//vuelve arriba de todo dentro del dom
 } 
 }
 
@@ -207,7 +207,7 @@ let max_poke=parseInt(max)
 let min_poke=parseInt(min)
 
 let fragment = document.createDocumentFragment();
-menu.disabled=true;
+
 for(let i=min_poke;i<max_poke;i++){
 
 
