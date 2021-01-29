@@ -16,8 +16,8 @@ let six=document.getElementById('sixth')
 let seven=document.getElementById('seventh')
 let eight=document.getElementById('eighth')
 let title=document.getElementById('title')
-let menus=document.querySelectorAll(".menu button");
-
+let menus=document.querySelectorAll(".menus button");
+let salir=document.getElementById("salir")
 function disabilitar(){
 for(i=0; i<menus.length;i++) { 
 menus[i].setAttribute('disabled', true); 
@@ -27,7 +27,8 @@ menus[i].setAttribute('disabled', true);
 function activar(){
 for(i=0; i<menus.length;i++) { 
 menus[i].removeAttribute("disabled");
-}    
+
+}   
 }
 
 function remove(){
@@ -97,7 +98,6 @@ listar(809,893)
 //max es hasta donde termina el array y min desde donde empieza por que por ejemplo la segunda generecion emíeza desde 151 y termina en la 250
 async function listar(min,max){ //para usar await tiene que haber una funcion async global
 try{
-console.log("primer paso")
 let max_poke=parseInt(max)
 let min_poke=parseInt(min)
 let fragment = document.createDocumentFragment();
