@@ -4,12 +4,12 @@ background-size: cover;
 
 }
 .water,.ice{
-    background-image:url("./img/agua.gif");
+    background-image:url("../img/agua.gif");
     background-size: cover;
     
 }
 .fire{
-    background-image:url("./img/fuego.gif");
+    background-image:url("../img/fuego.gif");
     background-size: cover;
    
 }
@@ -30,7 +30,7 @@ background-size: cover;
 
 }
 .psychic{
-background-image:url("./img/violeta.gif");
+background-image:url("../img/violeta.gif");
 background-size: cover;
 
 }
@@ -42,7 +42,7 @@ background-size: cover;
 }
 
 .grass,.bug{
-    background-image:url("./img/hierba.gif");
+    background-image:url("../img/hierba.gif");
     background-size: cover;
    
 }
