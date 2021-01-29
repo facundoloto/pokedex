@@ -30,6 +30,7 @@ min-width:250px;
 min-height:120px
 
 }
+
 .home p{
 margin: 0 auto;
 width:50vw;
@@ -61,6 +62,7 @@ margin:0 auto;
 margin:50px;
 max-width:150px;
 }
+
 
 .footer footer{
 
@@ -140,7 +142,6 @@ display:block;
 position: relative;; /*posiciona el footer al pie de la pagina*/
 bottom:0;
 margin-top:10em;
-
 margin-bottom:.5em;
 }
 .footer p{

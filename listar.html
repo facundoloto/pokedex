@@ -38,51 +38,52 @@
 
 </div>
 
-<div class="push bg-primary"data-pushbar-id="mypushbar1" data-pushbar-direction="left">
- 
-    <!-- Example single danger button -->
-    <ul class="" id="menu">
-        <li> <h4 class="text-light text-left">Region</h4></li> <!--ver push.js y modificar diseño de card-->
-        <li class="">
-        <button  type="button" data-pushbar-close class="btn btn-primary" id="firts">Kanto(1-151)</button>
-        </li>
-        <li class="">
-            <button type="button" data-pushbar-close class="btn btn-primary" id="seconds">Johto(152-251)</button>
-        </li>
-        <li class="">
-        <button type="button"  data-pushbar-close class="btn btn-primary"id="third">Hoenn(252-386)</button>
-        </li>
-        <li class="">
-        <button type="button" data-pushbar-close class="btn btn-primary"id="quarter">Sinnoh(387-493)</button>
-        </li>
-        <li class="">
-        <button type="button"  data-pushbar-close class="btn btn-primary"id="fifth">Teselia(494-649)</button>
-        </li>
-        <li class="">
-        <button type="button"  data-pushbar-close class="btn btn-primary"id="sixth">Kalos(650-721)</button>
-        </li>
-        <li class="">
-        <button type="button" data-pushbar-close class="btn btn-primary"id="seventh">Alola(722-809)</button>
-        </li>
-        <li class="">
-        
-        <button type="button"  data-pushbar-close class="btn btn-primary"id="eighth">Galar(810-893)</button>
-        </li>
-     
-        </ul>
+<div class=" menu push bg-primary"data-pushbar-id="mypushbar1" data-pushbar-direction="left">
 
+<!-- Example single danger button -->
+<div class="menu">
+<ul class="" >
+<li> <h4 class="text-light text-left">Region</h4></li> <!--ver push.js y modificar diseño de card-->
+<li class="">
+<button  type="button" data-pushbar-close class="btn btn-primary"  id="firts">Kanto(1-151)</button>
+</li>
+<li class="">
+<button type="button" data-pushbar-close class="btn btn-primary"  id="seconds">Johto(152-251)</button>
+</li>
+<li class="">
+<button type="button"  data-pushbar-close class="btn btn-primary"  id="third">Hoenn(252-386)</button>
+</li>
+<li class="">
+<button type="button" data-pushbar-close class="btn btn-primary"  id="quarter">Sinnoh(387-493)</button>
+</li>
+<li class="">
+<button type="button"  data-pushbar-close class="btn btn-primary"   id="fifth">Teselia(494-649)</button>
+</li>
+<li class="">
+<button type="button"  data-pushbar-close class="btn btn-primary"  id="sixth">Kalos(650-721)</button>
+</li>
+<li class="">
+<button type="button" data-pushbar-close class="btn btn-primary"  id="seventh">Alola(722-809)</button>
+</li>
+<li class="">
+
+<button type="button"  data-pushbar-close class="btn btn-primary"  id="eighth">Galar(810-893)</button>
+</li>
+
+</ul>
+</div>
 
 
 <button class="close text-light"  data-pushbar-close>x</button>
 </div>
 <div class="filter bg-dark">
-  
-    <button class="btn btn-dark" data-pushbar-target="mypushbar1" >
-     <img src="./img/menu3.png">
-    </button></div>
-    
 
- 
+<button class="btn btn-dark" data-pushbar-target="mypushbar1" >
+<img src="./img/menu3.png">
+</button></div>
+
+
+
 
 
 
@@ -113,14 +114,14 @@
 
 
 <div class="container">
-    <div class="title" >
-       <h1 class="text-center text-light " id="title" >Pokedex</h1>
-        </div>
-        <div class="loader">
-            <img src="./img/loader.gif" id="load">
-            </div>
+<div class="title" >
+<h1 class="text-center text-light " id="title" >Pokedex</h1>
+</div>
+<div class="loader">
+<img src="./img/loader.gif" id="load">
+</div>
 <div class="list" id="listPokemon">
-  
+
 
 
 
@@ -135,16 +136,16 @@
 <script src="jquery-3.5.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="pokemonObj.js"></script>
+<script src="pokemonBg.js"></script>
 <script src="list.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></script> <!--libreria menu lateral-->
 <script type="text/javascript"> //sirve para el menu
-    const pushbar = new Pushbar({
-          blur:true,
-          overlay:true,
-        });
-  </script>
-      
+const pushbar = new Pushbar({
+blur:true,
+overlay:true,
+});
+</script>
+
 </body>
 </html>
