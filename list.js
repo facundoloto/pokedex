@@ -105,7 +105,7 @@ disabilitar()
 for(let i=min_poke;i<max_poke;i++){
 loader.style.display="none";
 let  total=await fetch(`https://pokeapi.co/api/v2/pokemon/${i+1}`) //los await sirve para que se vuelva sincrono,osea que lo que sigue despuesde await espere hasta que termine de ejecutarse
-let result_pokemon=await total.json() //el await este hace que se ejecute la funcion fetch await que guarda la paromesa que esta en la variable totalPromise
+let result_pokemon=await total.json() //el await este hace que se ejecute la funcion fetch await que guarda la promesa que esta en la variable totalPromise
 let url=String(`${result_pokemon.sprites.front_default}`) //al ser prototipado tenemos que poner la propiedad url y no el metodo set urlPoke
 const template=document.getElementById("template") //guardamos el temaplate en una variable
 const newTemplate=template.content.cloneNode(true) //clonamos el template
