@@ -5,6 +5,7 @@ loader.style.display="none" //desactivamos el gif de carga hasta que se aprenten
 let filtrar=document.getElementById('filter')
 let arr=new Array()
 let response=[]
+let bandera=false
 //generaciones
 let template=document.getElementById('template')
 let one=document.getElementById('firts')
@@ -40,6 +41,7 @@ window.scrollTo(0, 0)//vuelve arriba de todo dentro del dom
 
 //por cada generacion una funcion que envia por parametro desde donde buscar en la api hasta donde tiene que terminar de buscar
 one.addEventListener("click",function g1(){
+bandera=true
 remove()
 title.textContent="Kanto"
 loader.style.display="block";
@@ -101,9 +103,11 @@ try{
 let max_poke=parseInt(max)
 let min_poke=parseInt(min)
 let fragment = document.createDocumentFragment();
-disabilitar()
+//disabilitar()
+bandera=false
 for(let i=min_poke;i<max_poke;i++){
-loader.style.display="none";
+if(bandera==true){
+ loader.style.display="none";
 let  total=await fetch(`https://pokeapi.co/api/v2/pokemon/${i+1}`) //los await sirve para que se vuelva sincrono,osea que lo que sigue despuesde await espere hasta que termine de ejecutarse
 let result_pokemon=await total.json() //el await este hace que se ejecute la funcion fetch await que guarda la promesa que esta en la variable totalPromise
 let url=String(`${result_pokemon.sprites.front_default}`) //al ser prototipado tenemos que poner la propiedad url y no el metodo set urlPoke
@@ -120,6 +124,10 @@ img.src=`${url}`
 colorCard(card,bgPoke,type)
 fragment.appendChild(newTemplate) //fragment guarda todos los elementos para cuando queramos usarlos lo podamos mostrar en el dom cuando queramos
 poke.appendChild(fragment)
+}
+else{
+break
+}
 }
 activar()
 }
