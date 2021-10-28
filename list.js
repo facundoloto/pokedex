@@ -49,6 +49,7 @@ listar(0,151)
 })
 
 two.addEventListener("click",function g2(){
+bandera=true
 remove()
 title.textContent="Johto"
 loader.style.display="block"
@@ -56,6 +57,7 @@ listar(151,251)
 })
 
 trhee.addEventListener("click",()=>{
+bandera=true
 remove()
 title.textContent="Hoenn"
 loader.style.display="block";
@@ -129,7 +131,7 @@ else{
 break
 }
 }
-activar()
+
 }
 catch(Error){
 console.log(Error)
