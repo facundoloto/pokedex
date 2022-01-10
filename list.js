@@ -15,20 +15,8 @@ let six=document.getElementById('sixth')
 let seven=document.getElementById('seventh')
 let eight=document.getElementById('eighth')
 let title=document.getElementById('title')
-let menus=document.querySelectorAll(".menus button");
 let salir=document.getElementById("salir")
-function disabilitar(){
-for(i=0; i<menus.length;i++) { 
-menus[i].setAttribute('disabled', true); 
-} 
-}
 
-function activar(){
-for(i=0; i<menus.length;i++) { 
-menus[i].removeAttribute("disabled");
-
-}   
-}
 
 function remove(){
 while (poke.firstChild) { //si hay un hijo pasa al ciclo y elimana a todos hasta que el primero hijo de falso(ya no tenga ningun nodo hijo)
@@ -42,7 +30,7 @@ one.addEventListener("click",function g1(){
 remove()
 title.textContent="Kanto"
 
-    listar(0,152)  
+listar(0,152)  
 
 
 })
